@@ -5,18 +5,24 @@ import Banner from "../components/banner";
 import Shelf from "../components/shelf";
 
 export default function HomeScreen({ navigation }) {
-  function goToDetailsScreen() {
+  const handleOpenBanner = () => {
     navigation.navigate("details");
-  }
+  };
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <ScrollView>
-        <Button onPress={goToDetailsScreen}>go to details</Button>
-        <Banner />
-        <Shelf />
-        <Shelf />
-        <Shelf />
-        <Banner />
+        <Button
+          onPress={() => {
+            navigation.navigate("playback");
+          }}
+        >
+          playback
+        </Button>
+        <Banner navigation={navigation} openBanner={handleOpenBanner} />
+        <Shelf genre="Action" />
+        <Shelf genre="Adventure" />
+        <Shelf genre="Horror" />
+        <Banner navigation={navigation} />
         <Shelf />
         <Shelf />
       </ScrollView>

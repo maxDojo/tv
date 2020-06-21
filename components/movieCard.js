@@ -1,23 +1,25 @@
 import * as React from "react";
-import { Avatar, Button, Card, Title, Paragraph } from "react-native-paper";
-import { ScrollView, View, StyleSheet } from "react-native";
+import { Avatar, Button, Card } from "react-native-paper";
+import { ScrollView, View, StyleSheet, TouchableOpacity } from "react-native";
 import { MaterialCommunityIcons } from "react-native-vector-icons";
 
 const LeftContent = (props) => <Avatar.Icon {...props} icon="folder" />;
 
-const movieCard = () => {
+const movieCard = ({ url }) => {
   return (
     <Card style={styles.movieCard}>
-      <Card.Cover source={{ uri: "https://picsum.photos/700" }} />
-      <Card.Actions style={styles.actionBar}>
-        <View style={styles.left}>
-          <MaterialCommunityIcons name="share" size={24} />
-        </View>
-        <View style={styles.right}>
-          <MaterialCommunityIcons name="heart" size={24} />
-          <Button type="text">22</Button>
-        </View>
-      </Card.Actions>
+      <Card.Cover source={{ uri: "https://picsum.photos/300" }} />
+      <TouchableOpacity style={styles.play}>
+        {/* <Button icon="play" /> */}
+        <MaterialCommunityIcons name="play" size={30} />
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.share}>
+        <MaterialCommunityIcons
+          name="share"
+          size={25}
+          style={styles.shareButton}
+        />
+      </TouchableOpacity>
     </Card>
   );
 };
@@ -25,19 +27,28 @@ const movieCard = () => {
 const styles = StyleSheet.create({
   movieCard: {
     marginHorizontal: 5,
-    width: 180,
+    width: 150,
   },
-  actionBar: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+  play: {
+    position: "absolute",
+    bottom: 10,
+    right: 10,
+    zIndex: 5,
+    borderRadius: 15,
+    backgroundColor: "tomato",
+    width: 30,
+    height: 30,
   },
-  left: {
-    flexDirection: "row",
-    justifyContent: "flex-start",
+  share: {
+    position: "absolute",
+    top: 5,
+    right: 5,
+    zIndex: 5,
+    backgroundColor: "transparent",
+    height: 25,
   },
-  right: {
-    flexDirection: "row",
-    justifyContent: "flex-end",
+  shareButton: {
+    color: "tomato",
   },
 });
 

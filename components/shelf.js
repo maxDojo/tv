@@ -3,7 +3,7 @@ import { View, ScrollView, StyleSheet } from "react-native";
 import { Title, Button } from "react-native-paper";
 import MovieCard from "./movieCard";
 
-export default function shelf() {
+export default function shelf({ genre }) {
   return (
     <View style={styles.shelf}>
       <View style={styles.header}>
@@ -11,9 +11,9 @@ export default function shelf() {
         <Button type="outlined">MORE</Button>
       </View>
       <ScrollView horizontal={true}>
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
+        <MovieCard url="http://techslides.com/demos/sample-videos/small.mp4" />
+        <MovieCard url="http://techslides.com/demos/sample-videos/small.mp4" />
+        <MovieCard url="http://techslides.com/demos/sample-videos/small.mp4" />
       </ScrollView>
     </View>
   );

@@ -28,9 +28,9 @@ export default function drawer() {
   return (
     <Drawer.Navigator initialRouteName="Home" drawerType="slide">
       <Drawer.Screen name="Home" component={HomeTabs} />
-      <Drawer.Screen name="WatchList" component={Tab2} />
-      <Drawer.Screen name="Explore Languages" component={Tab2} />
-      <Drawer.Screen name="Explore Genres" component={Tab2} />
+      <Drawer.Screen name="Genres" component={Tab2} />
+      {/* <Drawer.Screen name="Explore Languages" component={Tab2} /> */}
+      <Drawer.Screen name="Starred" component={Tab2} />
       <Drawer.Screen name="Explore Rentals" component={Tab2} />
       <Drawer.Screen name="My Rentals" component={Tab2} />
       <Drawer.Screen name="Settings" component={Tab2} />

@@ -1,23 +1,19 @@
 import React from "react";
 import { Card, Button } from "react-native-paper";
-import { View, StyleSheet } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 
-export default function banner() {
+export default function banner({ navigation, openBanner }) {
   return (
-    <View styles={styles.banner}>
+    <TouchableOpacity style={styles.banner} onPress={openBanner}>
       <Card>
-        <Card.Title title="Card Title" subtitle="Card Subtitle" />
-        {/* <Card.Content>
-      <Title>Card title</Title>
-      <Paragraph>Card content</Paragraph>
-    </Card.Content> */}
-        <Card.Cover source={{ uri: "https://picsum.photos/700" }} />
-        <Card.Actions>
+        {/* <Card.Title title="Card Title" subtitle="Card Subtitle" /> */}
+        <Card.Cover source={{ uri: "https://picsum.photos/400" }} />
+        {/* <Card.Actions>
           <Button>Watch</Button>
           <Button>Save</Button>
-        </Card.Actions>
+        </Card.Actions> */}
       </Card>
-    </View>
+    </TouchableOpacity>
   );
 }
 

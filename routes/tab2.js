@@ -13,7 +13,7 @@ export default function HomeStack({ navigation }) {
         name="featured"
         component={SecondScreen}
         options={{
-          headerTitle: () => <Header navigation={navigation} title="TV App" />,
+          title: "TV App",
         }}
       />
       <Stack.Screen name="details" component={DetailsScreen} />
