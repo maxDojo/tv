@@ -9,7 +9,7 @@ import {
 } from "react-native-paper";
 import { name as appName } from "./app.json";
 import { StyleSheet, Text, View } from "react-native";
-import RootNavigation from "./routes/drawer";
+import RootNavigation from "./routes/rootNav";
 
 const theme = {
   ...DefaultTheme,

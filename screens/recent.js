@@ -2,10 +2,10 @@ import React from "react";
 import { View } from "react-native";
 import { Paragraph } from "react-native-paper";
 
-export default function HomeScreen() {
+export default function RecentScreen() {
   return (
     <View>
-      <Paragraph>This is the HomeScreen</Paragraph>
+      <Paragraph>This is the RecentScreen</Paragraph>
     </View>
   );
 }
