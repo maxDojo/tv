@@ -5,6 +5,9 @@ export const globalStyles = StyleSheet.create({
     width: 160,
     height: 200,
   },
+  subheading: {
+    marginTop: 30,
+  },
 });
 
 export const screenWidth = Dimensions.get("window").width;

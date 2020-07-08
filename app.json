@@ -1,13 +1,9 @@
 {
   "expo": {
-    "name": "tv",
-    "slug": "tv",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
-    "version": "1.0.0",
+    "name": "Dojo TV",
+    "slug": "dojo-tv",
+    "platforms": ["ios", "android", "web"],
+    "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -18,11 +14,14 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "android": {
+      "package": "com.techdojo.tv",
+      "versionCode": 1
+    },
+    "description": "in-progress movie viewing app (v0.0.1)"
   }
 }

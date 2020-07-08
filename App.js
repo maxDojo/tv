@@ -1,30 +1,31 @@
 import "react-native-gesture-handler";
-import React from "react";
+import React, { useReducer } from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { AppRegistry } from "react-native";
+import { AppRegistry, StyleSheet } from "react-native";
 import {
-  DefaultTheme,
   DarkTheme,
+  DefaultTheme,
   Provider as PaperProvider,
 } from "react-native-paper";
+import {
+  prefReducer,
+  prefDefault,
+  Preferences as AppPreferences,
+} from "./functions";
 import { name as appName } from "./app.json";
-import { StyleSheet, Text, View } from "react-native";
-import RootNavigation from "./routes/rootNav";
+import RootNavigation from "./routes/drawer";
 
-const theme = {
-  ...DefaultTheme,
-  colors: {
-    ...DefaultTheme.colors,
-    primary: "teal",
-    accent: "yellow",
-  },
-};
-
+// declare variables
+let theme;
 export default function App() {
+  const [pref, prefDispatch] = useReducer(prefReducer, prefDefault);
+  pref.darkMode == true ? (theme = DarkTheme) : (theme = DefaultTheme);
   return (
     <PaperProvider theme={theme}>
       <NavigationContainer>
-        <RootNavigation />
+        <AppPreferences.Provider value={{ pref: pref, dispatch: prefDispatch }}>
+          <RootNavigation />
+        </AppPreferences.Provider>
       </NavigationContainer>
     </PaperProvider>
   );
