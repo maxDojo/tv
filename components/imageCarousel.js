@@ -51,7 +51,7 @@ function ImageCarousel({ theme, navigation }) {
         style={styles.item}
         onPress={() => {
           carouselRef.current.scrollToIndex(index);
-          navigation.navigate("details", { movie: item });
+          navigation.navigate("show", { movie: item });
         }}
       >
         <ImageBackground source={{ uri: uri }} style={styles.imageBackground}>

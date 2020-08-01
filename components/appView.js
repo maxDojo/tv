@@ -10,7 +10,7 @@ function appView({ children, theme }) {
   return (
     <View
       style={{
-        paddingTop: currentHeight,
+        marginTop: currentHeight,
         backgroundColor: theme.colors.background,
         paddingBottom: 78,
         height: height,

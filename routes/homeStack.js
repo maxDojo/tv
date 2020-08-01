@@ -2,7 +2,7 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./homeTabs";
 import Search from "../screens/search";
-import Details from "../screens/details";
+import Show from "../screens/show";
 
 let Stack = createStackNavigator();
 function homeStack() {
@@ -18,7 +18,7 @@ function homeStack() {
           animationEnabled: false,
         }}
       />
-      <Stack.Screen name="details" component={Details} />
+      <Stack.Screen name="show" component={Show} />
     </Stack.Navigator>
   );
 }
