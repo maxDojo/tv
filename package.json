@@ -36,7 +36,12 @@
     "react-native-video": "^4.4.5",
     "react-native-video-player": "^0.10.1",
     "react-native-web": "~0.11.7",
-    "react-native-youtube-sdk": "^1.0.12"
+    "react-native-youtube-sdk": "^1.0.12",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "babel-preset-expo": "~8.1.0",
